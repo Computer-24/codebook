@@ -5,8 +5,6 @@ import {useLocation} from "react-router-dom";
 export const OrderPage = () => {
     const {state} = useLocation()
 
-    const status = true
-
     return (
         <main>
             {state.status ? <OrderSuccess data={state.data}/> : <OrderFail/>}

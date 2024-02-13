@@ -16,7 +16,7 @@ export async function getUser() {
     })
 
     if (!response.ok) {
-        throw {message: response.statusText, status: response.status,}
+        throw {message: response.statusText, status: response.status,}//eslint-disable-line
     }
     return await response.json()
 }
@@ -29,7 +29,7 @@ export async function getUserOrders() {
         headers: {"Content-Type": "application/json", Authorization: `Bearer ${token}`}
     });
     if (!response.ok) {
-        throw {message: response.statusText, status: response.status,}
+        throw {message: response.statusText, status: response.status,}//eslint-disable-line
     }
     return await response.json();
 }
@@ -56,7 +56,7 @@ export async function createOrder(cartList, total, user) {
         body: JSON.stringify(order)
     })
     if (!response.ok) {
-        throw {message: response.statusText, status: response.status,}
+        throw {message: response.statusText, status: response.status,}//eslint-disable-line
     }
     return await response.json()
 }
